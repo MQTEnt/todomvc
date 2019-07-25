@@ -1,5 +1,6 @@
 <template>
   <section class="todoapp">
+    <button-all-done/>
     <todo-header/>
 		<section class="main" v-if="todos.length">
 			<input class="toggle-all" type="checkbox" @click="allDone">
@@ -22,6 +23,7 @@
 <script>
 import TodoHeader from '~/components/header'
 import TodoFooter from '~/components/footer'
+import ButtonAllDone from '~/components/buttonAllDone'
 
 export default {
   validate ({ params }) {
@@ -90,7 +92,8 @@ export default {
   },
   components: {
     TodoHeader,
-    TodoFooter
+    TodoFooter,
+    ButtonAllDone
   }
 }
 </script>
